@@ -7,6 +7,7 @@
 ## 一、系统介绍
 可伸缩软件模型，应该像操作系统一样，能够对自己的模块，进行独立安装，启动，卸载等操作。同样的对于分布式软件模型来说，应该向计算机网络一样，具有路由，网卡等功能组件。本系统抽象操作系统模型和计算机网络模型，开发了一款可应用于单机和分布式环境的组件模型。
 该模型拥有以下几点特征，组件间低耦合，分布式环境下，组件可动态扩容，动态迁移，异常恢复。不依赖于复杂的云计算环境，也不依赖于Docker容器技术，所有都在自己掌控之中，可以看做是一种轻量级Java容器技术，功能强大，值得借鉴。
+
 ![系统截图][4]
 ## 二、核心组件介绍
 | 名称  |类型 | 介绍 |
@@ -36,4 +37,4 @@ Web界面提供了可视化的操作，和WebSocket远程连接窗口，用于管理组件。
   [1]: https://raw.githubusercontent.com/mircode/coreos/master/doc/imgs/1.gif
   [2]: https://raw.githubusercontent.com/mircode/coreos/master/doc/imgs/2.gif
   [3]: https://raw.githubusercontent.com/mircode/coreos/master/doc/imgs/3.gif
-  [4]: https://raw.githubusercontent.com/mircode/coreos/master/doc/imgs/1.png
+  [4]: https://raw.githubusercontent.com/mircode/coreos/master/doc/imgs/4.png
