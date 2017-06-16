@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding/.classpath=UTF-8
+encoding/.gitignore=UTF-8
+encoding/.project=UTF-8
+encoding//.settings/org.eclipse.jdt.core.prefs=UTF-8
+encoding//configuration/configuration.json=UTF-8
+encoding//src/os/debug/application/DebugApplication.java=UTF-8
+encoding//static/os.debug/favicon.ico=UTF-8
+encoding//static/os.debug/index.html=UTF-8
+encoding//static/os.debug/main/htm/about.htm=UTF-8
+encoding//static/os.debug/main/htm/home.htm=UTF-8
+encoding//test/.gitignore=UTF-8
+encoding//web/main.js=UTF-8
+encoding//web/style.css=UTF-8
+encoding/bnd.bnd=UTF-8
+encoding/readme.md=UTF-8

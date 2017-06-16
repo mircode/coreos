@@ -1,0 +1,62 @@
+<!-- main content start -->
+<section class="content">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box box-success">
+	                <div class="box-header with-border">
+	                  <h3 class="box-title">血氧管理</h3>
+	                </div>
+	                <div class="box-body">
+	                	 <div class="row" style="padding:0px 20px;">
+		                  	<form id="queryForm" class="form-inline">
+		                  		 <div class="col-md-3">
+		                  		 	  <div class="form-group">
+								        <label class="form-label">名称</label>
+								    	<input type="text" class="form-control" placeholder="名称" name="username" style="width:150px;">
+								      </div>
+								 </div>
+		                  		<div class="col-md-3">
+		                  			 <div class="form-group">
+								        <label class="form-label">开始时间</label>
+								    	<input type="text" class="form-control" name="start" data-provide="datepicker" 
+								    		placeholder="开始时间"
+								    		data-date-format="yyyy-mm-dd" 
+								    		data-date-language="zh-CN" 
+								    		data-date-end-date="-1d"
+								    		data-date-autoclose="true" style="width:150px;"/>
+								     </div>
+							  	</div>
+								<div class="col-md-3">
+									<div class="form-group">
+								        <label class="form-label">结束时间</label>
+								    	<input type="text" class="form-control" name="end" data-provide="datepicker"
+								    		placeholder="结束时间"
+								    		data-date-format="yyyy-mm-dd" 
+								    		data-date-language="zh-CN" 
+								    		data-date-end-date="0d"
+								    		data-date-autoclose="true" style="width:150px;"/>
+							    	</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label class="form-label">体质判定</label>
+								   		<input type="text" class="form-control" placeholder="体质判定" name="tzpd" style="width:150px;">
+								    </div>
+								</div>
+							</form>
+						</div>
+						<div class="row" style="text-align: center;">
+							<div class="col-md-12" style="margin:15px 0px 5px 0px;">
+							  	<button type="button" class="btn btn-primary" id="searchQuery"><i class="fa fa-search" ></i>&nbsp;查询</button>
+							  	<button type="button" class="btn btn-primary" id="searchAll"><i class="fa fa-search" ></i>&nbsp;查询全部</button>
+							  	<button type="button" class="btn btn-primary" data-mock="true" data-table="bld_oxygen"><i class="fa fa-calendar-plus-o" ></i>&nbsp;采集</button>
+							</div>
+						</div>
+						<section id="table_view"></section>
+	                </div>
+	        </div>
+        </div>    
+	</div>
+</section>
+<script src="js/person/bld_oxygen.js"></script> 
+<script src="lib/mock.js"></script>

@@ -1,0 +1,16 @@
+#!/bin/sh
+stty erase ^H
+
+# 默认端口号
+PORT="8080"
+# 获取当前目录位置
+COREOS_HOME=`pwd`
+
+
+# 如果脚本的第一个参数不为空,则重置PORT端口号
+if [ $# == 1 ]; then PORT=$1; fi
+	
+
+# 通过java -jar 启动程序,并指定占用的端口号和配置文件的位置
+java -Dorg.osgi.service.http.port=$PORT -Dos.home=$COREOS_HOME -Dos.conf=$COREOS_HOME/config.properties -jar master.jar
+

@@ -1,0 +1,15 @@
+[
+  {
+    "service.pid":"org.amdatu.remote.discovery.zookeeper",
+    "org.amdatu.remote.discovery.zookeeper.connectstring"
+       : "localhost:6789",
+    "org.amdatu.remote.discovery.zookeeper.host"
+       :"192.168.2.1",
+    "org.amdatu.remote.discovery.zookeeper.rootpath"
+       :"/rsa",
+    "org.amdatu.remote.discovery.zookeeper.path"
+       : "route",
+    "org.amdatu.remote.discovery.zookeeper.schedule"
+       : 10
+  }
+]

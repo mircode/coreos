@@ -1,0 +1,75 @@
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0003 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0003 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0000 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0000 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG main-SendThread(localhost:6789) org.apache.zookeeper.ClientCnxn - Got ping response for sessionid: 0x15bcdb36d6d0000 after 3ms
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0001 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0001 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0002 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0002 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0003 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0003 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0001 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0001 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0002 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0002 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0003 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0003 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0000 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0000 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG main-SendThread(localhost:6789) org.apache.zookeeper.ClientCnxn - Got ping response for sessionid: 0x15bcdb36d6d0000 after 1ms
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0001 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0001 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0002 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0002 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0003 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0003 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0002 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0002 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0001 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0001 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0003 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0003 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0000 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0000 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG main-SendThread(localhost:6789) org.apache.zookeeper.ClientCnxn - Got ping response for sessionid: 0x15bcdb36d6d0000 after 0ms
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0001 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0001 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0002 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0002 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0003 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0003 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+WARN NIOServerCxn.Factory:0.0.0.0/0.0.0.0:6789 org.apache.zookeeper.server.NIOServerCnxn - Exception causing close of session 0x15bcdb36d6d0002 due to java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+DEBUG NIOServerCxn.Factory:0.0.0.0/0.0.0.0:6789 org.apache.zookeeper.server.NIOServerCnxn - IOException stack trace
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:503)
+	at org.apache.zookeeper.server.NIOServerCnxn$Factory.run(NIOServerCnxn.java:262)
+INFO NIOServerCxn.Factory:0.0.0.0/0.0.0.0:6789 org.apache.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:59070 which had sessionid 0x15bcdb36d6d0002
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0000 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0000 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG main-SendThread(localhost:6789) org.apache.zookeeper.ClientCnxn - Got ping response for sessionid: 0x15bcdb36d6d0000 after 1ms
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0001 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0001 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0003 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0003 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+WARN NIOServerCxn.Factory:0.0.0.0/0.0.0.0:6789 org.apache.zookeeper.server.NIOServerCnxn - Exception causing close of session 0x15bcdb36d6d0003 due to java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+DEBUG NIOServerCxn.Factory:0.0.0.0/0.0.0.0:6789 org.apache.zookeeper.server.NIOServerCnxn - IOException stack trace
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:503)
+	at org.apache.zookeeper.server.NIOServerCnxn$Factory.run(NIOServerCnxn.java:262)
+INFO NIOServerCxn.Factory:0.0.0.0/0.0.0.0:6789 org.apache.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:59099 which had sessionid 0x15bcdb36d6d0003
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0001 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0001 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - Processing request:: sessionid:0x15bcdb36d6d0000 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG SyncThread:0 org.apache.zookeeper.server.FinalRequestProcessor - sessionid:0x15bcdb36d6d0000 type:ping cxid:0xfffffffffffffffe zxid:0xfffffffffffffffe txntype:unknown reqpath:n/a
+DEBUG main-SendThread(localhost:6789) org.apache.zookeeper.ClientCnxn - Got ping response for sessionid: 0x15bcdb36d6d0000 after 1ms

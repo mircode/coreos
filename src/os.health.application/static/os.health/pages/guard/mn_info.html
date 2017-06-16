@@ -1,0 +1,161 @@
+<!-- main content start -->
+<section class="content">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box box-success">
+	                <div class="box-header with-border">
+	                  <h3 class="box-title">我的信息</h3>
+	                </div>
+	                <div class="box-body">
+	                	<div class="row">
+	                		<div class="col-md-4" id="mn_user_info"></div>
+				            <div class="col-md-8">
+				            	<div class="nav-tabs-custom">
+					                <ul class="nav nav-tabs" id="tag_search">
+					                  <li class="active"><a id="mn_relatives_tag" href="#mn_relatives" data-toggle="tab">亲属</a></li>
+					                  <li><a id="mn_doctor_tag" href="#mn_doctor" data-toggle="tab">医生</a></li>
+					                  <li><a id="mn_volunteer_tag" href="#mn_volunteer" data-toggle="tab">志愿者</a></li>
+					                  <li class="pull-right">
+					                  	<div class="btn-group pull-left" style="margin-right:10px;">
+					                  	  <button type="button" class="btn btn-default" style="height:33px;" data-mock="true" data-table="mn_info"><i class="fa fa-calendar-plus-o">补全</i></button>
+					                  	  <button type="button" class="btn btn-default" style="height:33px;" id="btn_edit"><i class="fa fa-edit">编辑</i></button>
+					                      <button type="button" class="btn btn-default" style="height:33px;" id="btn_add"><i class="fa fa-plus">添加</i></button>
+					                      <button type="button" class="btn btn-default" style="height:33px;" id="btn_remove"><i class="fa fa-remove">删除</i></button>
+					                    </div>
+					                    <input id="search_btn" type="input" style="width:150px;height:33px;" class="form-control input-sm pull-right"  placeholder="搜索">
+					                  </li>
+					                </ul>
+					                 <div class="tab-content">
+					                 	<div class="tab-pane active" id="mn_relatives">
+					                 	</div>
+					                 	<div class="tab-pane" id="mn_doctor">
+					                 	</div>
+					                 	<div class="tab-pane" id="mn_volunteer">
+					                 	</div>
+					                 </div>
+				                 </div>
+				            </div>
+	                	</div>
+	                	
+	                </div>
+	        </div>
+        </div>    
+	</div>
+</section>
+<script src="js/guard/mn_info.js"></script> 
+<script src="lib/mock.js"></script>
+<script type="text/html" id="mn_user_info_tmpl">
+	  <form id="editForm">
+		  <input name="id" type="hidden" value="${id}"/>
+		  
+	      <div class="box box-widget widget-user" style="border: 1px solid #00a65a;">
+	        <div class="widget-user-header bg-green">
+	          <h3 class="widget-user-username" style="margin-bottom:3px;">
+	          	<input name="username" style="height:40px" type="text" value="${username}" data-edit="true" readonly="true" class="bg-green"/></h3>
+	          <h5 class="widget-user-desc">
+	          	<input name="profession" type="text" value="${profession}" data-edit="true" readonly="true" class="bg-green"/>
+	          </h5>
+	        </div>
+	        <div class="widget-user-image">
+	          <img class="img-circle" src="img/user1-128x128.jpg" alt="User Avatar">
+	        </div>
+	        <div class="box-footer">
+	          <div class="row">
+	            <div class="col-sm-4 border-right">
+	              <div class="description-block">
+	                <h5 class="description-header">${qn_num}</h5>
+	                <a class="description-text" href="javascript:void(0)" data-href="#mn_relatives">亲属</a>
+	              </div>
+	            </div>
+	            <div class="col-sm-4 border-right">
+	              <div class="description-block">
+	                <h5 class="description-header">${ys_num}</h5>
+	                <a class="description-text" href="javascript:void(0)" data-href="#mn_doctor">医生</a>
+	              </div>
+	            </div>
+	            <div class="col-sm-4">
+	              <div class="description-block">
+	                <h5 class="description-header">${zyz_num}</h5>
+	                <a class="description-text" href="javascript:void(0)" data-href="#mn_volunteer">志愿者</a>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	         <div class="box-footer no-padding">
+	          <ul class="nav nav-stacked">
+	            
+	            <li><a href="#">血压<span class="pull-right label bg-blue">${press}</span></a></li>
+	            <li class="odd"><a href="#">血氧<span class="pull-right label bg-aqua">${oxygen}</span></a></li>
+	            <li><a href="#">血糖<span class="pull-right label bg-green">${sugar}</span></a></li>
+	            <li class="odd"><a href="#">体脂<span class="pull-right label bg-red">${fat}</span></a></li>
+	            
+	            <li><a href="#">性别：<span>
+	            	<input name="sex" type="text" value="${sex}" readonly="true" data-edit="true" style="width:90px;"/>
+	            </span></a></li>
+	            <li class="odd"><a href="#">年龄：<span>
+	            	<input name="age" type="text" value="${age}" readonly="true" data-edit="true" style="width:70px;"/>
+	            </span></a></li>
+	            <li><a href="#">电话：<span>
+	            	<input name="phonenum" type="text" value="${phone}" readonly="true" data-edit="true" style="width:90px;"/>
+	            </span></a></li>
+	            <li class="odd"><a href="#">城市：<span>
+	            	<input name="city" type="text" value="${city}" readonly="true" data-edit="true" style="width:70px;"/>
+	            </span></a></li>
+	            <li class="full"><a href="#">病史：<span>
+	            	<input name="ill" type="text" value="${ill}" readonly="true" data-edit="true" style="width:255px;"/>
+	            </span></a></li>
+	            <li class="full"><a href="#">家庭住址：<span>
+	            	<input name="address" type="text" value="${address}" readonly="true" data-edit="true" style="width:227px;"/>
+	            </span></a></li>
+	          </ul>
+	        </div>
+	      </div>
+      </form>
+</script>
+<style>
+	#mn_user_info .nav>li {
+		display:inline-block;
+	    width: 53%;
+	}
+	#mn_user_info .nav>li.odd {
+		display:inline-block;
+	    width: 45%;
+	}
+	#mn_user_info .nav>li.full{
+		width: 100%;
+	}
+	.nav-tabs>li>a:hover{
+		border-color:#fff;
+	}
+	.nav-tabs-custom>.nav-tabs>li{
+		margin-right:0px;
+	}
+	.description-block{
+		cursor: pointer;
+	}
+	a.description-text,a.description-text:visited{
+		color:#000;
+	}
+	a.description-text:hover{
+		color:#0089DB;
+	}
+	.dataTable tr{
+		cursor: pointer;
+	}
+	.dataTable tr.selected{
+		background-color: #2672EC;
+	}
+	
+	#mn_user_info input{
+		border:1px solid transparent
+	}
+</style>
+
+<!--弹出层-->
+<div class="lay_pop" id="lay_pop">
+	<button type="button" class="btn btn-info pull-right" style="height:30px;margin-left:10px;line-height: 1;width:50px;" id="btn_submit">确定</button>
+	<div id="mn_relatives_pop" style="display:none" data-role="pop"></div>
+	<div id="mn_doctor_pop" style="display:none" data-role="pop"></div>
+	<div id="mn_volunteer_pop" style="display:none" data-role="pop"></div>
+</div>
+<!--开始-->

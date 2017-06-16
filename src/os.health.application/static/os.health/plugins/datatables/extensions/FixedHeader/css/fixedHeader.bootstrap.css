@@ -1,0 +1,48 @@
+table.dataTable.fixedHeader-floating,
+table.dataTable.fixedHeader-locked {
+  background-color: white;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  position:relative;
+}
+
+
+.fixed-holder{
+  display:block;
+  height:39px;
+  width:100%;
+  overflow:hidden;
+  position: fixed;
+  top:0px;
+}
+
+.table-responsive{
+	overflow-x:hidden !important;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-o-user-select:none;
+	user-select:none;
+}
+.table-pre,.table-next{
+    position: fixed;
+    top: 45%;
+    margin-left:-20px;
+    font-size: 50px;
+    cursor:pointer;
+    color:#888;
+    display:none;
+}
+.table-pre:hover,.table-next:hover{
+	color:#fff;
+	background-color:#333;
+	opacity: 0.8;
+}
+.table-pre{
+	 margin-left:-20px;
+	 padding-right:1px;
+}
+.table-next{
+	margin-right:7px;
+	padding-left:2px;
+	right:0px;
+}

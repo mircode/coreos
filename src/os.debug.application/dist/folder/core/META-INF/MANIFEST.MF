@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: os.debug.application.launch
+Bundle-Version: 1.0.0
+Embedded-Runpath: jar/osgi.enroute.equinox.log.adapter-2.0.0.jar,jar/o
+ rg.eclipse.osgi-3.10.100.v20150529-1857.jar,jar/biz.aQute.launcher-3.
+ 3.0.jar
+JPM-Command: debug
+Main-Class: aQute.launcher.pre.EmbeddedLauncher
+Service-Component: *

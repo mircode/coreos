@@ -1,0 +1,59 @@
+<section class="content">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box box-success">
+					<div class="box-header with-border">
+					  <h3 class="box-title">用户管理</h3>
+					</div>
+					<div class="box-body">
+						 <div class="row" style="margin-bottom:20px;width:100%;">
+							<div class="col-md-3">
+									<!--变更用户-->
+									<form style="height:480px"  id="editForm">
+										  <input type="hidden" class="form-control" name="id" >
+										  <div class="form-group has-feedback">
+											<input type="text" name="username" class="form-control" placeholder="用户名">
+											<span class="glyphicon glyphicon-user form-control-feedback"></span>
+										  </div>
+										  <div class="form-group has-feedback">
+											<input type="text" name="realname" class="form-control" placeholder="真实姓名">
+											<span class="glyphicon glyphicon-user form-control-feedback"></span>
+										  </div>										  
+										  <div class="form-group has-feedback">
+											<input type="email" name="email" class="form-control" placeholder="邮箱">
+											<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+										  </div>
+										  <div class="form-group has-feedback">
+											<input type="text" name="password" class="form-control" placeholder="密码">
+											<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+										  </div>
+										  <div class="form-group has-feedback">
+											<input type="text" name="retypepassword" class="form-control" placeholder="确认密码">
+											<span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+										  </div>
+										  <div class="form-group">
+											<label style="margin-right:10px;">
+											  <input type="radio" name="role" class="minimal" value="admin">
+												管理员
+											</label>
+											<label>
+											  <input type="radio" name="role" class="minimal" checked value="user">
+												普通用户
+											</label>
+										  </div>
+										  <p id="msg" class="msginfo"></p>
+										  <button type="button" class="btn btn-primary btn-block btn-flat" id="add_btn" data-action='add'>添加</button>
+									</form>
+									 <!--变更用户-->
+							</div>
+							<div class="col-md-9" id="table_user">
+							</div>
+						</div>
+					</div><!-- /.box-body -->
+			</div>
+		</div>    
+	</div>
+</section>
+
+<script src="js/system/user.js"></script> 
+<script src="lib/mock.js"></script>

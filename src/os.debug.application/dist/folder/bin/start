@@ -1,0 +1,42 @@
+#!/bin/sh
+stty erase ^H
+
+# 默认值
+PORT="8080"
+TYPE="normal"
+
+# 一个参数
+if [ $# == 1 ]; then
+	expr $1 + 0 &>/dev/null
+    if [ $? -ne 0 ]; then
+		TYPE=$1;
+	else
+		PORT=$1;
+	fi
+fi
+
+# 两个参数
+if [ $# == 2 ]; then
+	TYPE=$1;
+	PORT=$2;
+fi
+
+
+
+if [ "$COREOS_HOME" = "" ] ;then
+        CURRENT_DIR=`pwd`
+        if [ -f $CURRENT_DIR/bin/start ]; then
+                COREOS_HOME=$CURRENT_DIR
+        else
+                cd ..
+                CURRENT_DIR=`pwd`
+                COREOS_HOME=$CURRENT_DIR
+        fi
+        export COREOS_HOME=$COREOS_HOME
+fi
+
+rm "$COREOS_HOME/core/launcher.properties"
+cp "$COREOS_HOME/core/$TYPE.properties" "$COREOS_HOME/core/launcher.properties"
+
+java -cp "$COREOS_HOME/core/." "-Dorg.osgi.service.http.port=$PORT" -Dos.home=$COREOS_HOME aQute.launcher.pre.EmbeddedLauncher
+

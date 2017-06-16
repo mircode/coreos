@@ -1,0 +1,51 @@
+#
+#  BUNDLE 
+#
+
+
+Bundle-Version:					1.0.0
+
+
+Private-Package: \
+	os.moudel.db.provider;
+Import-Package: \
+	javax.sql,\
+	os.moudel.db.api;version='[1.0,2)',\
+	com.mysql.jdbc;version=5.1.35,\
+	*
+-buildpath: \
+	osgi.enroute.base.api;version=1.0,\
+	com.mysql.jdbc;version=5.1,\
+	os.core.provider;version=latest
+	
+-testpath: \
+	osgi.enroute.junit.wrapper;version=4.12
+
+-includeresource: {readme.md}
+
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=os.moudel.db.provider)',\
+	osgi.identity;filter:='(osgi.identity=os.core.provider)'
+	
+	
+-runbundles: \
+	org.apache.felix.configadmin;version='[1.8.8,1.8.9)',\
+	org.apache.felix.log;version='[1.0.1,1.0.2)',\
+	org.apache.felix.scr;version='[2.0.2,2.0.3)',\
+	org.eclipse.equinox.metatype;version='[1.4.100,1.4.101)',\
+	org.osgi.service.metatype;version='[1.3.0,1.3.1)',\
+	os.moudel.db.provider;version=snapshot,\
+	com.mysql.jdbc;version='[5.1.35,5.1.36)',\
+	os.core.provider;version=snapshot
+Export-Package: os.moudel.db.api
+
+Bundle-Icon: icon.png;size=64
+Bundle-Name: 数据管理
+Bundle-Description: 提供了连接MySQL数据库的相关功能和查询接口
+Bundle-Vendor: admin
+Bundle-Copyright: admin
+Bundle-License: 开源
+Bundle-ContactAddress: 524907699@qq.com
+Bundle-Category: 医疗医疗
+Bundle-DocURL: 无

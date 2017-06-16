@@ -1,0 +1,44 @@
+#
+#  APPLICATION
+#
+
+Bundle-Version: 1.0.0
+
+Export-Package: \
+	osgi.enroute.jsonrpc.api;provide:=true,\
+	osgi.enroute.jsonrpc.dto;provide:=true
+Private-Package: \
+	os.health.application,\
+	os.health.base,\
+	os.health.filter
+
+EnRoute-Application: 	os.health
+JPM-Command:			health
+
+-includeresource: \
+	{readme.md}, \
+	{configuration=configuration}, \
+	{static=static}, \
+	web=web
+Conditional-Package: aQute.lib*
+-buildpath: \
+	osgi.enroute.base.api,\
+	os.core.provider;version=latest,\
+	biz.aQute.bndlib;packages=*
+	
+-testpath: \
+	osgi.enroute.junit.wrapper;version=4.12
+-runbundles: org.apache.felix.log;version='[1.0.1,1.0.2)'
+Export-Package: \
+	osgi.enroute.jsonrpc.api,\
+	osgi.enroute.jsonrpc.dto
+	
+Bundle-Icon: icon.png;size=64
+Bundle-Name: 医疗健康监控系统
+Bundle-Description: 医疗健康监控系统Web操作界面
+Bundle-Vendor: admin
+Bundle-Copyright: admin
+Bundle-License: 开源
+Bundle-ContactAddress: 524907699@qq.com
+Bundle-Category: 医疗医疗
+Bundle-DocURL: 无

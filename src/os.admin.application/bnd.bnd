@@ -1,0 +1,36 @@
+#
+#  APPLICATION
+#
+
+Bundle-Version: 1.0.0
+Bundle-Description: 管理组件
+Export-Package: \
+	osgi.enroute.jsonrpc.api;provide:=true,\
+	osgi.enroute.jsonrpc.dto;provide:=true
+Export-Package: \
+	osgi.enroute.jsonrpc.api,\
+	osgi.enroute.jsonrpc.dto	
+Conditional-Package: aQute.lib*
+
+Private-Package: \
+	os.admin.application,\
+	os.admin.job,\
+	os.admin.mgr,\
+	os.admin.base
+
+EnRoute-Application: 	admin
+JPM-Command:			admin
+
+-includeresource: \
+	{readme.md}, \
+	{configuration=configuration}, \
+	{static=static}
+
+-buildpath: \
+	osgi.enroute.base.api,\
+	os.core.provider;version=latest,\
+	biz.aQute.bndlib;packages=*
+	
+-testpath: \
+	osgi.enroute.junit.wrapper;version=4.12
+-runbundles: org.apache.felix.log;version='[1.0.1,1.0.2)'

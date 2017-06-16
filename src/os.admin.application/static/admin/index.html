@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>系统管理</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    
+    <!--插件样式-->	
+    <!-- build:plugins_css -->
+    <link rel="stylesheet" href="plugins/qSearch/css/QSearch.css">
+    <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="plugins/select2/select2.css">
+    <link rel="stylesheet" href="plugins/icheck/css/blue.css">
+    <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="plugins/datatables/extensions/FixedHeader/css/fixedHeader.bootstrap.css">
+    
+    <!-- endbuild -->
+    
+    <!--核心样式-->
+    <!-- build:bootstrap_css -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <!-- endbuild  -->
+ 	
+    <!-- build:main_css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/iconfont.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/skins/skin-blue.min.css">
+    <!-- endbuild  -->
+ 	
+    <!--[if lt IE 9]>
+        <script src="plugins/html5/html5shiv.min.js"></script>
+        <script src="plugins/html5/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+
+  <body class="hold-transition skin-blue sidebar-mini" >
+    <div class="wrapper">
+
+      <!-- Main Header -->
+      <header class="main-header">
+
+        <!-- Logo -->
+        <a href="javacript:void(0)" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>组件</b></span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>组件</b>管理系统</span>
+        </a>
+        <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top" role="navigation">
+        	<!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+             <li class="messages-menu" data-auth="true">
+                <a href="javascript:void(0)" id="debug">
+                  <i class="fa fa-bug"></i>&nbsp;调试
+                </a>
+              </li>
+             <li class="messages-menu" data-auth="true">
+                <a href="javascript:void(0)" id="reset">
+                  <i class="fa fa-database"></i>&nbsp;重置
+                </a>
+              </li>
+              <li class="messages-menu" data-auth="true">
+                <a href="javascript:void(0)" id="logout">
+                  <i class="fa fa-power-off"></i>&nbsp;注销
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+              <p id="user_info">用户：管理员</p>
+              <!-- Status -->
+              <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+            </div>
+          </div>
+          <!-- Sidebar Menu -->
+          <ul class="sidebar-menu" id="sidebar-menu">
+            <li class="header">系统管理</li>
+            <!-- Optionally, you can add icons to the links -->
+             <li class="treeview active">
+              <a href="#"><i class="fa fa-gear"></i> <span>系统管理</span> <i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+              	<li><a href="#" data-target="pages/system/coreos.html"><i class="fa fa-user"></i>系统管理</a></li>
+              </ul>
+            </li>
+          </ul><!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper overlay-wrapper" id="content-wrapper">
+      	
+      </div><!-- /.content-wrapper -->
+    
+    </div><!-- ./wrapper -->
+
+    <!-- REQUIRED JS SCRIPTS -->
+
+	<!-- JQuery 库-->
+	<!-- build:jquery_js -->
+	<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+	<!-- endbuild -->
+	<!-- build:jquery_plugins_js -->
+	<script src="plugins/JQueryMd5/jQuery.md5.js"></script>
+	<script src="plugins/tmpl/jquery.tmpl.min.js"></script>
+	<script src="plugins/layer/layer.js"></script>
+	<script src="plugins/dragsort/jquery.dragsort.js"></script>
+	<script src="plugins/menu/jquery.menu.js"></script>
+	<!-- endbuild -->
+	
+	<!-- Bootstrap 库-->
+	<!-- build:bootstrap_js -->
+	<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- endbuild -->
+	<!-- build:bootstrap_plugins_js -->
+	<script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+	<script src="plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
+	<script src="plugins/select2/select2.full.min.js"></script>
+	<script src="plugins/icheck/js/icheck.min.js"></script>
+	<!-- endbuild -->
+		
+	<!-- Underscore 库-->
+	<!-- build:underscore_js -->
+	<script src="plugins/underscore/underscore-min.js"></script>
+	<!-- endbuild -->
+	<!-- DataTables 库-->
+	<!-- build:datatables_js -->
+	<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+	<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>  	
+	<script src="plugins/datatables/extensions/Buttons/js/dataTables.buttons.min.js"></script>
+	<script src="plugins/datatables/extensions/Buttons/js/jszip.min.js"></script>
+	<script src="plugins/datatables/extensions/Buttons/js/buttons.html5.min.js"></script>
+	<script src="plugins/datatables/extensions/Buttons/js/buttons.print.min.js"></script>
+	<script src="plugins/datatables/extensions/FixedHeader/js/dataTables.fixedHeader.js"></script>
+	<!-- endbuild -->
+	<!--核心JS-->
+	<!-- build:main_js -->
+	<script src="lib/config.js"></script>
+	<script src="lib/schart.js"></script>
+	<script src="lib/main.js"></script>
+	<!-- endbuild -->
+  </body>
+</html>

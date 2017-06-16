@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>登录</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+     <!--插件样式-->	
+    <!-- build:plugins_css -->
+    <link rel="stylesheet" href="plugins/icheck/css/blue.css">
+    <!-- endbuild -->
+    
+    <!--核心样式-->
+    <!-- build:bootstrap_css -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <!-- endbuild  -->
+ 	
+    <!-- build:main_css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/skins/skin-blue.min.css">
+    <!-- endbuild  -->
+ 	
+    <!--[if lt IE 9]>
+        <script src="plugins/html5/html5shiv.min.js"></script>
+        <script src="plugins/html5/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body class="hold-transition login-page">
+    <div class="login-box">
+      <div class="login-logo">
+        <a href="javascript:void(0)"><b>医疗</b>健康监护系统</a>
+      </div>
+      <div class="login-box-body">
+        <p class="login-box-msg"></p>
+        <p class="login-box-msg"></p>
+        <form  method="post">
+          <div class="form-group has-feedback">
+            <input id="user" type="user" class="form-control" placeholder="用户名或邮箱" >
+            <span class="fa fa-user form-control-feedback"></span>
+          </div>
+          <div class="form-group has-feedback">
+            <input id="password" type="password" class="form-control" placeholder="密码">
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+          </div>
+          <div class="row">
+          	<div class="col-xs-12">
+           		<p id="msg" class="msginfo"></p>
+						</div>
+          </div>
+          <div class="row">
+            <div class="col-xs-8">
+              <div class="checkbox icheck">
+                <label>
+                  <input type="checkbox" id="remember">&nbsp;&nbsp;记住密码
+                </label>
+              </div>
+            </div>
+            <div class="col-xs-4">
+              <button type="button" id="submit_btn" class="btn btn-primary btn-block btn-flat">登录</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+	<!-- JQuery 库-->
+	<!-- build:jquery_js -->
+	<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+	<script src="plugins/cookie/js/jquery.cookie.js"></script>
+	<script src="plugins/JQueryMd5/jQuery.md5.js"></script>
+	<!-- endbuild -->
+	
+	<!-- Bootstrap 库-->
+	<!-- build:bootstrap_js -->
+	<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- endbuild -->
+	<!-- icheck -->
+	<!-- build:icheck_js -->
+	<script src="plugins/icheck/js/icheck.min.js"></script>
+	<!-- endbuild -->
+	
+	
+	<!--核心JS-->
+	<!-- build:main_js -->
+	<script src="lib/config.js"></script>
+	<script src="js/system/login.js"></script>
+	<!-- endbuild -->
+  </body>
+</html>

@@ -1,0 +1,188 @@
+<html>
+	<head>
+		<title>命令行</title>
+		<meta charset="utf-8">
+		<script src="../../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+		<style>
+			body{
+				margin:0px;
+				padding:0px;
+			}
+			.telnet{
+				margin:0px;
+				padding:0px;
+				width:100%;
+				height: 100%;
+				color:#00ff40;
+				font-size:12px;
+				background-color:#000;
+				font-family: Courier New,consolas,宋体;
+			}
+			::-webkit-scrollbar {
+				width: 8px;
+				height: 16px;
+				background-color: #F5F5F5;
+			}
+			::-webkit-scrollbar-track {
+				border-radius: 10px;
+				background-color: #F5F5F5;
+			}
+			::-webkit-scrollbar-thumb {
+				border-radius: 5px;
+				background-color: #dedede;
+			}
+			::-webkit-scrollbar-thumb:hover {
+				background-color: #999;
+			}
+		</style>
+	</head>
+	<body>
+		<textarea class="telnet" id="telnet"></textarea>
+		
+		<script type="text/javascript">
+			$.fn.telnet=function(addr){
+				var self=$(this);
+				
+				$.info_timer=$.info_timer||null;
+				$.clr_timer=$.clr_timer||null;
+				$.sockets=$.sockets||new Array();
+				
+				$(this).val('');
+				// 当前窗口地址
+				if(addr){
+					try{
+						connect(addr);
+					}catch(err){
+						self.val('$>> ');	
+					}
+				}else{
+					self.val('$>> ');
+				}
+				function info(str){
+					if(str.startsWith('exit')){
+						var socket=getCur();
+						info(getAddr(socket)+' exit\r\n$>> ');
+						var socket=getCur();
+						if(socket==null) {
+							title();
+							return;
+						}else{
+				    		title(socket);
+				    	}
+					}else{
+						var val=self.val();
+							val+=str;
+							self.val(val);
+					}
+				}
+				function clear(clr){
+					var clr=clr||'';
+					if($.clr_timer){
+						window.clearTimeout($.clr_timer);
+					}
+					$.clr_timer=setTimeout(function(){
+						self.val(clr);
+					},50);
+				}
+				function title(socket){
+					var title='命令行';
+					if(socket){
+						title='命令行 '+getAddr(socket);
+					}
+					$('title').html(title);
+					window.setTitle(title);
+				}
+				// 连接
+				function connect(addr){
+					var socket=new WebSocket('ws://'+addr);
+					socket.onopen=function(event){
+						$.sockets.push(socket);
+						title(socket);
+					}
+					socket.onmessage=function(event){
+						info(event.data);
+					}
+					socket.onclose = function(evt) { 
+			            console.info(event);
+			            $.sockets.pop();
+			        }
+					socket.onerror = function(evt) { 
+						console.info(evt);
+						info('$>> connect '+addr+' error\r\n$>> ');
+						$.sockets.pop();
+			        }
+					return socket;
+				}
+				
+				// 绑定事件
+				self.off('keypress').keypress(function(e) {
+			    	 if(e.which==13){ 
+				  		var splits=$(this).val().replace(/(^\s*)|(\s*$)/g,'').split('\n');
+				    	 var cmd=splits[splits.length-1].replace(/[$]>>\s*/ig,'').replace(';$','');
+				    	 if(cmd=='clear'){
+				    	 	clear('$>> ');
+				    	 }else if(cmd==''||cmd.match(/[$]>>\s*/ig)){
+				    	 	if($.info_timer){
+								window.clearTimeout($.info_timer);
+							}
+							$.info_timer=setTimeout(function(){
+								info('$>> ');
+							},50);
+							
+				    	 }else if(getCur()==null&&cmd=='exit'){
+				    		 window.exit();
+				    	 }else{
+				    	 	if(cmd.match(/(^telnet)/g)){
+				    	 		var ip=cmd.split(/\s+/g)[1];
+				    	 		var port=cmd.split(/\s+/g)[2];
+				    	 		if(ip&&port&&port.match(/\d+/g)){
+				    	 			connect(ip+':'+port);
+				    	 			clear();
+				    	 		}else{
+				    	 			if($.info_timer){
+										window.clearTimeout($.info_timer);
+									}
+									$.info_timer=setTimeout(function(){
+										info('$>> telnet commond format error\r\n$>> ');
+									},50);
+				    	 		}
+				    	 		
+				    	 	}else{
+					    	 	var socket=getCur();
+					    	 	if(socket==null){
+					    	 		return;
+					    	 	};
+					    	 	socket.send(cmd);
+					    	 	// 由父窗口创建
+					    	 	window.refresh();
+				    	 	}
+				    	 }
+				  	}
+				});
+				
+				function getCur(){
+					if($.sockets.length>0){
+						return $.sockets[$.sockets.length-1];
+					}else{
+					   	return null;
+					}
+				}
+				function getAddr(socket){
+					return socket.url.replace(/ws:\/\/(.*)/ig,'$1').replace('/','');
+				}
+			}
+			
+			window.telnet=function(addr){
+				$('#telnet').telnet(addr);	
+			}
+			window.cancel=function(){
+				for(var i in $.sockets){
+					$.sockets[i].send('exit');
+				}
+			}
+			telnet();
+			
+		</script>
+	</body>
+</html>
+

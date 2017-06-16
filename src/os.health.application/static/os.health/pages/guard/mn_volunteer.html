@@ -1,0 +1,115 @@
+<!-- main content start -->
+<section class="content">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box box-success">
+	                <div class="box-header with-border">
+	                  <h3 class="box-title">志愿者管理</h3>
+	                </div>
+	                <div class="box-body">
+	                	 <div class="row" style="padding:0px 20px;">
+		                  	<form id="queryForm" class="form-inline">
+		                  		 <div class="col-md-3">
+		                  		 	  <div class="form-group">
+								        <label class="form-label">名称</label>
+								    	<input type="text" class="form-control" placeholder="名称" name="name" style="width:150px;">
+								      </div>
+								 </div>
+								 <div class="col-md-3">
+									<div class="form-group">
+										<label class="form-label">联系电话</label>
+								   		<input type="text" class="form-control" placeholder="联系电话" name="phone" style="width:150px;">
+								    </div>
+								</div>
+		                  		<div class="col-md-3">
+		                  			 <div class="form-group">
+								        <label class="form-label">开始时间</label>
+								    	<input type="text" class="form-control" name="start" data-provide="datepicker" 
+								    		placeholder="开始时间"
+								    		data-date-format="yyyy-mm-dd" 
+								    		data-date-language="zh-CN" 
+								    		data-date-end-date="-1d"
+								    		data-date-autoclose="true" style="width:150px;"/>
+								     </div>
+							  	</div>
+								<div class="col-md-3">
+									<div class="form-group">
+								        <label class="form-label">结束时间</label>
+								    	<input type="text" class="form-control" name="end" data-provide="datepicker"
+								    		placeholder="结束时间"
+								    		data-date-format="yyyy-mm-dd" 
+								    		data-date-language="zh-CN" 
+								    		data-date-end-date="0d"
+								    		data-date-autoclose="true" style="width:150px;"/>
+							    	</div>
+								</div>
+							</form>
+						</div>
+						<div class="row" style="text-align: center;">
+							<div class="col-md-12" style="margin:15px 0px 5px 0px;">
+							  	<button type="button" class="btn btn-primary" id="searchQuery"><i class="fa fa-search" ></i>&nbsp;查询</button>
+							  	<button type="button" class="btn btn-primary" id="searchAll"><i class="fa fa-search" ></i>&nbsp;全部</button>
+							  	<button type="button" class="btn btn-primary" id="btn_edit"><i class="fa fa-edit">&nbsp;编辑</i></button>
+					            <button type="button" class="btn btn-primary" id="btn_add"><i class="fa fa-plus">&nbsp;添加</i></button>
+					            <button type="button" class="btn btn-primary" id="btn_remove"><i class="fa fa-remove">&nbsp;删除</i></button>
+					            <button type="button" data-mock="true" data-table="mn_volunteer" class="btn btn-primary"><i class="fa fa-calendar-plus-o">&nbsp;创建</i></button>
+							</div>
+						</div>
+						<section id="table_view"></section>
+	                </div>
+	        </div>
+        </div>    
+	</div>
+</section>
+<script src="js/guard/mn_volunteer.js"></script>
+<script src="lib/mock.js"></script>  
+<!--弹出层-->
+<div class="lay_pop" id="lay_pop" style="display: none;">
+	<form class="form" id="editForm">
+		  <input type="hidden" class="form-control" name="id" >
+          <div class="box-body">
+          		<div class="row">
+	                <div class="form-group col-md-4">
+	                  <label for="name" class="control-label">姓名</label>
+	                  <input type="text" class="form-control" name="name" placeholder="姓名">
+	                </div>
+	                <div class="form-group col-md-4">
+	                  <label for="sex" class="control-label">性别</label>
+	                   <input type="text" class="form-control" name="sex" placeholder="性别">
+	                </div>
+	               <div class="form-group col-md-4">
+	                  <label for="age" class="control-label">年龄</label>
+	                   <input type="text" class="form-control" name="age" placeholder="年龄">
+	                </div>
+                </div>
+                <div class="row">
+	                <div class="form-group col-md-4">
+	                  <label for="phone" class="control-label">电话</label>
+	                  <input type="text" class="form-control" name="phone" placeholder="电话">
+	                </div>
+	                <div class="form-group col-md-4">
+	                  <label for="city" class="control-label">城市</label>
+	                   <input type="text" class="form-control" name="city" placeholder="城市">
+	                </div>
+	                 <div class="form-group col-md-4">
+	                  <label for="school" class="control-label">学校</label>
+	                  <input type="text" class="form-control" name="school" placeholder="学校">
+	                </div>
+                </div>
+                 <div class="row">
+	                 <div class="form-group col-md-4">
+	                  <label for="grade" class="control-label">年级</label>
+	                   <input type="text" class="form-control" name="grade" placeholder="年级">
+	                </div>
+	                <div class="form-group col-md-8">
+	                  <label for="address" class="control-label">住址</label>
+	                   <input type="address" class="form-control" name="address" placeholder="住址">
+	                </div>
+                </div>
+          </div>
+          <div class="box-footer">
+            <button type="button" id="btn_submit" class="btn btn-info pull-right">确定</button>
+          </div>
+    </form>
+</div>
+<!--开始-->

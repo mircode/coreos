@@ -1,0 +1,38 @@
+#
+# LAUNCH SPECFICATION 
+#
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=os.network.debug.provider)',\
+	osgi.identity;filter:='(osgi.identity=org.amdatu.remote.discovery.zookeeper)'
+
+
+-runbundles: \
+	org.apache.felix.configadmin;version='[1.8.8,1.8.9)',\
+	org.apache.felix.log;version='[1.0.1,1.0.2)',\
+	org.apache.felix.scr;version='[2.0.2,2.0.3)',\
+	org.eclipse.equinox.metatype;version='[1.4.100,1.4.101)',\
+	org.osgi.service.metatype;version='[1.3.0,1.3.1)',\
+	os.network.debug.provider;version=snapshot,\
+	os.core.provider;version=snapshot,\
+	org.amdatu.remote.admin.http;version='[0.1.2,0.1.3)',\
+	org.amdatu.remote.discovery.zookeeper;version='[0.1.2,0.1.3)',\
+	org.amdatu.remote.topology.promiscuous;version='[0.1.2,0.1.3)',\
+	org.apache.felix.dependencymanager;version='[3.2.0,3.2.1)',\
+	org.apache.felix.http.servlet-api;version='[1.1.2,1.1.3)',\
+	org.eclipse.equinox.event;version='[1.3.100,1.3.101)',\
+	org.osgi.service.event;version='[1.3.1,1.3.2)',\
+	org.osgi.service.remoteserviceadmin;version='[1.1.0,1.1.1)',\
+	org.apache.felix.gogo.runtime;version='[1.0.0,1.0.1)',\
+	org.apache.felix.gogo.shell;version='[1.0.0,1.0.1)',\
+	org.apache.felix.http.jetty;version='[3.2.0,3.2.1)',\
+	osgi.enroute.executor.simple.provider;version='[2.0.0,2.0.1)',\
+	osgi.enroute.logger.simple.provider;version='[2.0.0,2.0.1)',\
+	osgi.enroute.web.simple.provider;version='[2.0.0,2.0.1)',\
+	jackson-core-asl;version='[1.9.13,1.9.14)',\
+	jackson-mapper-asl;version='[1.9.13,1.9.14)',\
+	log4j;version='[1.2.17,1.2.18)',\
+	org.apache.commons.lang3;version='[3.4.0,3.4.1)',\
+	org.apache.hadoop.zookeeper;version='[3.3.6,3.3.7)'
+-runstorage:            generated/node8081
+-runproperties:         org.osgi.service.http.port=8081
