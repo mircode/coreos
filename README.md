@@ -7,14 +7,14 @@
 ## 一、系统介绍
 可伸缩软件模型，应该像操作系统一样，能够对自己的模块，进行独立安装，启动，卸载等操作。同样的对于分布式软件模型来说，应该向计算机网络一样，具有路由，网卡等功能组件。本系统抽象操作系统模型和计算机网络模型，开发了一款可应用于单机和分布式环境的组件模型。
 该模型拥有以下几点特征，组件间低耦合，分布式环境下，组件可动态扩容，动态迁移，异常恢复。不依赖于复杂的云计算环境，也不依赖于Docker容器技术，所有都在自己掌控之中，可以看做是一种轻量级Java容器技术，功能强大，值得借鉴。
-
+![系统截图][4]
 ## 二、核心组件介绍
 | 名称  |类型 | 介绍 |
 | ---- | ----- |----- |
 | coreos  |全部| 系统内核，提供了组件的运行环境，并提供了管理组件的相关接口 |
 | admin  |分布式| 系统管理，分布式环境下，对组件统一管理的相关功能。|
 | network |分布式| 系统网卡，抽象网卡功能，用于组件间夸主机通讯。  |
-| route |分布式| 系统路由，抽象路由功能，用于网卡组件间的寻址调用。|
+| route |全分布式| 系统路由，抽象路由功能，用于网卡组件间的寻址调用。|
 
 ## 三、业务组件介绍
 业务组件，将一个传统的Web系统，进行模块化拆分。并且部署于CoreOS系统内核之上，从而实现了改Web系统的，灵活的架构变迁。具体细节不在详述。
@@ -36,3 +36,4 @@ Web界面提供了可视化的操作，和WebSocket远程连接窗口，用于管理组件。
   [1]: https://raw.githubusercontent.com/mircode/coreos/master/doc/imgs/1.gif
   [2]: https://raw.githubusercontent.com/mircode/coreos/master/doc/imgs/2.gif
   [3]: https://raw.githubusercontent.com/mircode/coreos/master/doc/imgs/3.gif
+  [4]: https://raw.githubusercontent.com/mircode/coreos/master/doc/imgs/1.png
