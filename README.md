@@ -35,4 +35,4 @@ Web界面提供了可视化的操作，和WebSocket远程连接窗口，用于管理组件。
 
   [1]: https://raw.githubusercontent.com/mircode/coreos/master/doc/imgs/1.gif
   [2]: https://raw.githubusercontent.com/mircode/coreos/master/doc/imgs/2.gif
-  [2]: https://raw.githubusercontent.com/mircode/coreos/master/doc/imgs/2.gif
+  [3]: https://raw.githubusercontent.com/mircode/coreos/master/doc/imgs/3.gif
